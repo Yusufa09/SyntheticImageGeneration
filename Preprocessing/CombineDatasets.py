@@ -4,17 +4,17 @@ from tqdm import tqdm
 
 DATASETS = {
     "AZH": [
-        "/Users/yusufabdulkadir/Downloads/AZH_combined"
+        "data/AZH",
     ],
     "Kaggle": [
-        "/Users/yusufabdulkadir/Downloads/data_wound_seg/train_images",
-        "/Users/yusufabdulkadir/Downloads/data_wound_seg/test_images"
+        "/data/kaggle/train_images",
+        "/data/kaggle/test_images"
     ],
     "WoundDB": [
-        "/Users/yusufabdulkadir/Downloads/woundDB"
+        "/data/woundDB"
     ]
 }
-OUTPUT_DIR = "/Users/yusufabdulkadir/Downloads/final_dataset"
+OUTPUT_DIR = "/Downloads/final_dataset"
 TARGET_SIZE = (512, 512)
 
 def combine_datasets(datasets, output_dir, target_size=(512, 512)):
