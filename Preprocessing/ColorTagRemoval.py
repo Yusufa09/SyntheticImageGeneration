@@ -1,6 +1,6 @@
 """
 Color Calibration Card Removal Agent
-Uses AI vision (GPT-4V or Claude) to detect and remove color cards from medical images
+Uses LLM to detect and remove color cards from medical images
 """
 
 from dotenv import load_dotenv
@@ -235,7 +235,7 @@ If there IS a card, provide the bounding box coordinates.
                 cards_removed += 1
         
         print(f"\n{'='*70}")
-        print(f"✅ Processing complete!")
+        print(f" Processing complete!")
         print(f"   Total images: {len(image_files)}")
         print(f"   Cards detected: {sum(r.has_card for r in results)}")
         print(f"   Cards removed: {cards_removed}")
@@ -257,13 +257,7 @@ If there IS a card, provide the bounding box coordinates.
         csv_path = output_path / "card_detection_results.csv"
         df = pd.DataFrame([r.dict() for r in results])
         df.to_csv(csv_path, index=False)
-        print(f"📊 Results saved to: {csv_path}")
-        
-        # Save as JSON (with full details)
-        json_path = output_path / "card_detection_results.json"
-        with open(json_path, 'w') as f:
-            json.dump([r.dict() for r in results], f, indent=2)
-        print(f"📄 JSON saved to: {json_path}")
+        print(f"📊 Results saved to: {csv_path}")        
 
 # Example usage
 if __name__ == "__main__":
