@@ -1,0 +1,18 @@
+# Pinned versions that install together on Python 3.10-3.12.
+# diffusers / transformers / accelerate match the versions the v1 notebook used.
+# On EC2 the extra index supplies CUDA 12.1 builds of torch; on a Mac, pip falls back to PyPI.
+--extra-index-url https://download.pytorch.org/whl/cu121
+torch==2.4.1
+torchvision==0.19.1
+diffusers==0.30.3
+transformers==4.44.2
+accelerate==0.33.0
+huggingface_hub==0.24.6
+safetensors==0.4.5
+numpy==1.26.4
+scipy==1.13.1
+pillow==10.4.0
+tqdm==4.66.5
+lpips==0.1.4
+torchmetrics==1.4.1
+torch-fidelity==0.3.0
