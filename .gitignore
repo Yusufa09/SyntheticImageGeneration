@@ -1,0 +1,11 @@
+# Secrets
+.env
+
+# OS and editor files
+.DS_Store
+.idea/
+.venv/
+__pycache__/
+
+# Local outputs
+roi_output/
